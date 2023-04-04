@@ -6,7 +6,7 @@ const Footer = () => {
       <p className="text_logo">
         Poke<span>Next</span>
       </p>
-      <p>&copy; 2023</p>
+      <p className={styles.copyright}>&copy; 2023</p>
     </footer>
   );
 };

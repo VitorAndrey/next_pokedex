@@ -1,0 +1,15 @@
+.about_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 95%;
+  max-width: 640px;
+  text-align: justify;
+}
+.charizard {
+  max-width: 350px;
+  width: 90%;
+  height: auto;
+}
