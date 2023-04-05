@@ -14,7 +14,7 @@ interface CardProps {
 
 export default function Card({ pokemon }: CardProps) {
   return (
-    <div>
+    <div className={styles.pokemon_card}>
       <Image
         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
         width="120"

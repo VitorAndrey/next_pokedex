@@ -1,0 +1,6 @@
+.pokemon_card {
+  width: 300px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
