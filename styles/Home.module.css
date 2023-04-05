@@ -6,6 +6,7 @@
 }
 
 .pokemon_container {
+  max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;

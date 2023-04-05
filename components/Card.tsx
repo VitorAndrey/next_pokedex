@@ -1,6 +1,7 @@
 import styles from "@/styles/Card.module.css";
 
 import Image from "next/image";
+import Link from "next/link";
 
 interface Pokemon {
   name: string;
@@ -17,11 +18,15 @@ export default function Card({ pokemon }: CardProps) {
     <div className={styles.pokemon_card}>
       <Image
         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
-        width="120"
-        height="120"
+        width="220"
+        height="220"
         alt={pokemon.name}
       />
-      <h3>{pokemon.name}</h3>
+      <div className={styles.pokemon_info}>
+        <p>#{pokemon.id}</p>
+        <h3>{pokemon.name}</h3>
+        <Link href={"/"}>Detalhes</Link>
+      </div>
     </div>
   );
 }

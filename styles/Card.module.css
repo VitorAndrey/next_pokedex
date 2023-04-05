@@ -5,4 +5,19 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background: lightblue;
+}
+.pokemon_card a {
+  padding: 0.7rem 2rem;
+  background: red;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+}
+.pokemon_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
