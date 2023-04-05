@@ -1,6 +1,7 @@
 import styles from "@/styles/Home.module.css";
 
 import Head from "next/head";
+import Image from "next/image";
 
 import Card from "@/components/Card";
 
@@ -43,8 +44,16 @@ export default function Home({ pokemons }: HomeProps) {
         <title>Home</title>
       </Head>
 
-      <header>
-        <h1>Pokémon</h1>
+      <header className={styles.logo_container}>
+        <h1 className={styles.logo}>
+          Poké<span>Next</span>
+        </h1>
+        <Image
+          src="/images/pokeball.png"
+          width={50}
+          height={50}
+          alt="pokeball_logo"
+        />
       </header>
       <section className={styles.pokemon_container}>
         {pokemons.map((pokemon) => (

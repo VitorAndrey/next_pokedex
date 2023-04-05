@@ -18,14 +18,14 @@ export default function Card({ pokemon }: CardProps) {
     <div className={styles.pokemon_card}>
       <Image
         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
-        width="220"
-        height="220"
+        width="180"
+        height="180"
         alt={pokemon.name}
       />
       <div className={styles.pokemon_info}>
         <p>#{pokemon.id}</p>
         <h3>{pokemon.name}</h3>
-        <Link href={"/"}>Detalhes</Link>
+        <Link href={`/pokemon/${pokemon.id}`}>Detalhes</Link>
       </div>
     </div>
   );

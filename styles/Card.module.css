@@ -1,11 +1,13 @@
 .pokemon_card {
   width: 300px;
-  height: 500px;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: lightblue;
+  border-radius: 1rem;
+  border: 2px solid red;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
 }
 .pokemon_card a {
   padding: 0.7rem 2rem;
@@ -19,5 +21,5 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 }
