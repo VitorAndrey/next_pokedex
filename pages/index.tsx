@@ -1,51 +1,56 @@
-import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 
-interface Item {
+import Head from "next/head";
+
+import Card from "@/components/Card";
+
+interface Pokemon {
   id: number;
   name: string;
   url: string;
 }
 
 interface HomeProps {
-  pokemons: any;
+  pokemons: Pokemon[];
 }
 
-export async function getSataticProps() {
-  const maxPokemons = 80;
-  const api = "https://pokeapi.co/api/v2/pokemon";
-
-  const res = await fetch(`${api}/?limit=${maxPokemons}`);
+export async function getStaticProps() {
+  const maxPokemon = 251;
+  const res = await fetch(
+    `https://pokeapi.co/api/v2/pokemon/?limit=${maxPokemon}`
+  );
   const data = await res.json();
 
-  // Add Pokemon Index
-  data.results.forEach((item: Item, index: number) => {
-    item.id = index + 1;
+  // add pokemon id
+  const pokemonsWithId = data.results.map((pokemon: Pokemon, index: number) => {
+    return {
+      ...pokemon,
+      id: index + 1,
+    };
   });
 
   return {
     props: {
-      pokemons: data.results,
+      pokemons: pokemonsWithId,
     },
   };
 }
 
-const Home: React.FC<HomeProps> = ({ pokemons }) => {
+export default function Home({ pokemons }: HomeProps) {
   return (
     <>
       <Head>
-        <title>PokeNext</title>
+        <title>Home</title>
       </Head>
-      <section>
-        <h1>Home</h1>
-        <ul>
-          {pokemons.map((pokemon: any) => (
-            <li key={pokemon.id}>{pokemon.name}</li>
-          ))}
-        </ul>
+
+      <header>
+        <h1>Pokémon</h1>
+      </header>
+      <section className={styles.pokemon_container}>
+        {pokemons.map((pokemon) => (
+          <Card key={pokemon.id} pokemon={pokemon} />
+        ))}
       </section>
     </>
   );
-};
-
-export default Home;
+}
