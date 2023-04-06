@@ -21,11 +21,12 @@ export default function Card({ pokemon }: CardProps) {
         width="180"
         height="180"
         alt={pokemon.name}
+        priority
       />
       <div className={styles.pokemon_info}>
         <p>#{pokemon.id}</p>
         <h3>{pokemon.name}</h3>
-        <Link href={`/pokemon/${pokemon.id}`}>Detalhes</Link>
+        <Link href={`/pokemons/${pokemon.id}`}>Detalhes</Link>
       </div>
     </div>
   );
