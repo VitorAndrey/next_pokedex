@@ -30,9 +30,15 @@
   gap: 3rem;
 }
 
-@media screen and (max-width: 700px) {
-  .links_container {
+@media screen and (max-width: 600px) {
+  .home_link {
     display: none;
+  }
+  .logo_container h1 {
+    font-size: 25px;
+  }
+  .links_container a {
+    font-size: 18px;
   }
   .navbar {
     padding: 1rem;

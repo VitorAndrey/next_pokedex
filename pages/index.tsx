@@ -16,7 +16,7 @@ interface HomeProps {
 }
 
 export async function getStaticProps() {
-  const maxPokemon = 251;
+  const maxPokemon = 9;
   const res = await fetch(
     `https://pokeapi.co/api/v2/pokemon/?limit=${maxPokemon}`
   );
