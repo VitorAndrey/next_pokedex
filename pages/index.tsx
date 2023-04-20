@@ -4,6 +4,8 @@ import Head from "next/head";
 import Image from "next/image";
 
 import Card from "@/components/Card";
+import { useState } from "react";
+import { setgroups } from "process";
 
 interface Pokemon {
   id: number;
@@ -16,7 +18,7 @@ interface HomeProps {
 }
 
 export async function getStaticProps() {
-  const maxPokemon = 9;
+  const maxPokemon = 20;
   const res = await fetch(
     `https://pokeapi.co/api/v2/pokemon/?limit=${maxPokemon}`
   );
@@ -55,6 +57,7 @@ export default function Home({ pokemons }: HomeProps) {
           alt="pokeball_logo"
         />
       </header>
+
       <section className={styles.pokemon_container}>
         {pokemons.map((pokemon) => (
           <Card key={pokemon.id} pokemon={pokemon} />

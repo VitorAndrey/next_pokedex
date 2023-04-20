@@ -1,5 +1,7 @@
 import styles from "@/styles/PokemonId.module.css";
 
+import { useState } from "react";
+
 import { GetStaticPropsContext } from "next";
 
 import Head from "next/head";
@@ -27,7 +29,7 @@ interface Props {
 }
 
 export const getStaticPaths = async () => {
-  const maxPokemon = 9;
+  const maxPokemon = 20;
   const res = await fetch(
     `https://pokeapi.co/api/v2/pokemon/?limit=${maxPokemon}`
   );
