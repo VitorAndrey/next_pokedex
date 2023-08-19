@@ -1,38 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next Pokedex
 
-## Getting Started
+Este repositório contém o projeto **Next Pokedex**, desenvolvido utilizando o **Create Next App**. O projeto foi criado como parte do curso no YouTube ministrado por Matheus Battisti. O objetivo principal era aprimorar os fundamentos do Next.js, incluindo recursos como renderização do lado do servidor (Server-Side Rendering), roteamento, criação de rotas aninhadas (nested routes) e rotas dinâmicas. A aplicação resultante é uma Pokedex online que permite acessar as descrições dos diferentes pokémons. Você pode experimentar a aplicação online através deste link: [Next Pokedex](https://next-pokedex-l9z6je8v8-vitorandrey.vercel.app/).
 
-First, run the development server:
+## Visão Geral
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Neste projeto, tive a oportunidade de explorar e aplicar conceitos importantes do Next.js, uma estrutura de desenvolvimento React otimizada para aplicativos da web. Alguns dos principais aspectos abordados neste projeto incluem:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Server-Side Rendering (SSR):** Utilizei o recurso de SSR do Next.js para renderizar algumas partes da aplicação no servidor, proporcionando tempos de carregamento mais rápidos e melhor SEO.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- **Roteamento:** Implementei roteamento de páginas utilizando o módulo `next/router`, permitindo a navegação entre diferentes páginas da aplicação.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- **Rotas Aninhadas e Dinâmicas:** Exploramos a criação de rotas aninhadas e rotas dinâmicas, o que nos permite exibir informações detalhadas sobre diferentes pokémons individualmente.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Como Usar
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Se você deseja executar este projeto localmente ou explorar o código, siga as etapas abaixo:
 
-## Learn More
+1. **Clonar o repositório:** Clone este repositório para o seu ambiente local usando o seguinte comando:
 
-To learn more about Next.js, take a look at the following resources:
+   ```
+   git clone https://github.com/VitorAndrey/next_pokedex.git
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Instalar Dependências:** Navegue até o diretório do projeto e instale as dependências usando npm ou yarn:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```
+   cd next_pokedex
+   npm install
+   ```
 
-## Deploy on Vercel
+   ou
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```
+   cd next_pokedex
+   yarn install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. **Executar o Aplicativo:** Após a instalação das dependências, inicie o servidor de desenvolvimento:
+
+   ```
+   npm run dev
+   ```
+
+   ou
+
+   ```
+   yarn dev
+   ```
+
+   A aplicação estará disponível em `http://localhost:3000`.
+
+## Contribuição
+
+Se você deseja contribuir para este projeto, fique à vontade para abrir um _pull request_. Sua contribuição é bem-vinda, seja para correção de bugs, adição de novos recursos ou melhorias na documentação.
+
+## Agradecimentos
+
+Espero que este projeto sirva como um exemplo de aplicação Next.js e que ajude você a compreender melhor os conceitos abordados no curso. Sinta-se à vontade para explorar o código, experimentar e contribuir. Caso tenha alguma dúvida ou sugestão, não hesite em entrar em contato. Divirta-se codificando!
